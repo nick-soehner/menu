@@ -1,38 +1,117 @@
+:root {
+    --accent-color: #a83232;
+    --secondary-text: #1f1f1f;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding-top: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--accent-color);
+}
+
+p {
+    font-size: 1.25em;
+}
+
+.item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.underline {
+    width: 4em;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+}
+
+.item {
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-img {
+    width: 300px;
+    height: 200px;
+    border: 4px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+.item-underline {
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--secondary-text);
+    opacity: 0.75;
+    margin: 10px 0;
+}
+
+.item-textbox {
+    margin-left: 20px;
+    height: 200px;
+}
+
+.item-desc {
+  width: 400px;
+  text-align: left;
+}
+
+.textbox-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+    .item-container {
+        margin-top: 50px;
+    }
+
+    .item-textbox {
+      margin-left: 0;
+    }
+
+    .item-desc {
+      width: 300px;
+    }
 }
